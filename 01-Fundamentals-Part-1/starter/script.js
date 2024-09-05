@@ -161,16 +161,174 @@ job = 'teacher';
  * Type Conversion
  */
 
-const inputYear = '1991';
-console.log(Number(inputYear), inputYear);
-console.log(Number(inputYear) + 10);
+// const inputYear = '1991';
+// console.log(Number(inputYear), inputYear);
+// console.log(Number(inputYear) + 10);
 
-console.log(Number('Carlos')); // not convertable `Nan` invalid number or not a number
-console.log(typeof NaN);
+// console.log(Number('Carlos')); // not convertable `Nan` invalid number or not a number
+// console.log(typeof NaN);
 
-console.log(String(23), 23);
-console.log();
+// console.log(String(23), 23);
+// console.log();
 
 /**
  * Type Coercion
+ * wherever there number + string, js automatically convert numbers to string
+ * string can be converted to numbers as well (reverse conversion)
  */
+
+// console.log('I am ' + 23 + ' years old')
+// console.log('23' - '10' - 3)
+
+
+// =======================================
+/**
+ * Equality Operators: == vs. ===
+ */
+
+// const age = 18;
+// if (age === 18) {
+//    console.log('this is equal.')
+// }
+
+// const favorite = Number(prompt('whats the u fav num: '));
+// console.log(favorite);
+
+// if (favorite === 24) console.log('U guess my age.')
+// else if (favorite === 7) console.log('underage')
+// else console.log('u are not allowed here')
+
+
+// =======================================
+/**
+ * Boolean Logic
+ * and
+ * or
+ * not
+ */
+
+// // a and b
+// const hasDriversLicense = true; // A
+// const hasGoodVision = true; // B
+
+// console.log(hasDriversLicense && hasGoodVision);
+// console.log(hasDriversLicense || hasGoodVision);
+// console.log(!hasDriversLicense);
+
+// const shouldDrive = hasDriversLicense && hasGoodVision;
+
+// // if (shouldDrive) {
+// // console.log('This person is able to drive.');
+// // } else {
+// //    console.log('Someone else should drive.')
+// // }
+
+// const isTired = false; // c
+// console.log(hasDriversLicense || hasGoodVision && isTired)
+
+// // I want sarah to drive if she is applicable to drive
+// if (hasDriversLicense && hasGoodVision && !isTired) {
+//    console.log('This person is able to drive.');
+// } else {
+//    console.log('Someone else should drive.');
+// }
+
+
+// =======================================
+/**
+ * The switch Statement
+ *
+ */
+
+// const day = 'sunday';
+
+// switch (day) {
+//    case 'monday': // using strict equllity way
+//       console.log('Today is monday');
+//       break;
+//    case 'tuesday': // using strict equllity way
+//       console.log('Preparing for first day of work');
+//       break;
+//    case 'wednesday': // using strict equllity way
+//       console.log('3 day of work, 2 more days to go.');
+
+//       break;
+//    case 'thursday': // using strict equllity way
+//       console.log('2nd day of work, 3 more days to go.');
+//    case 'friday':
+//       console.log('1 more day to rest.');
+//       break;
+//    case 'saturday':
+//       console.log('Last day!!!!');
+//    case 'sunday':
+//       console.log('Bebe time');
+//       break;
+//    default:
+//       console.log('Theres no valid date.');
+// }
+
+// doing this with if else
+
+// if (day === 'monday') {
+//    console.log('Today is monday');
+// } else if (day === 'tuesday') {
+//    console.log('Preparing for first day of work');
+// } else if (day === 'wednesday') {
+//    console.log('2nd day of work, 3 more days to go.');
+// } else if (day === 'thursday') {
+//    console.log('3 day of work, 2 more days to go.');
+// } else if (day === 'friday') {
+//    console.log('1 more day to rest.');
+// } else if (day === 'saturday') {
+//    console.log('Last day!!!!');
+// } else if (day === 'sunday') {
+//    console.log('Bebe time');
+// } else {
+//    console.log('Theres no valid date.');
+// }
+
+
+
+// =======================================
+/**
+ * Expressions
+ * 1 + 3 is expression
+ *  below is statement
+ * if (23 > 10 ) {
+      const str = '23 is bigger';
+   }
+ */
+
+// 3 + 3;
+// 1991;
+// true && false && !false
+
+// if (23 > 10 ) {
+//    const str = '23 is bigger';
+// }
+
+
+
+// =======================================
+/**
+ * The conditional (Ternary) Operator
+ * ?
+ * 
+ */
+
+const age = 93;
+age >= 18 ? console.log("I like to drike wine") : console.log("I like to drink water");
+
+const drink = age >= 18 ? 'wine' : 'water';
+console.log(drink);
+
+let drink2;
+if (age >= 18) {
+   drink2 = 'wine';
+} else {
+   drink2 = 'water';
+}
+
+console.log(drink2);
+
+console.log(`I like to drink ${age >= 18 ? 'wine' : 'water'}`);
