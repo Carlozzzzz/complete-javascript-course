@@ -133,53 +133,116 @@
 // ================================================
 /**
  * Reviewing Functions
- * 
+ *
  */
 
-const yearsUntilRetirement = (birthYear, firstName) => {
-    const age = 2024 - birthYear;
-    const retirement = 65 - age;
+// const yearsUntilRetirement = (birthYear, firstName) => {
+//     const age = 2024 - birthYear;
+//     const retirement = 65 - age;
 
-    return `${firstName} retires in ${retirement} years.`;
+//     return `${firstName} retires in ${retirement} years.`;
 
-};
+// };
 
-const calcAge = function (birthYear) {
+// const calcAge = function (birthYear) {
 
-    // current year;
-    const currentYear = 2024;
-    return currentYear - birthYear;
+//     // current year;
+//     const currentYear = 2024;
+//     return currentYear - birthYear;
+// }
+
+// function yearsUntilRetirementFunction(birthYear, firstName) {
+//     const age = calcAge(birthYear);
+//     const retirement = 65 - age;
+
+//     if (retirement > 0) {
+//         console.log(`${firstName} retires in ${retirement} years.`);
+//         return retirement;
+//     } else {
+//         console.log(`${firstName} has already retires.`);
+//         return -1;
+//     }
+
+//     // return `${firstName} retires in ${retirement} years.`;
+// }
+
+// console.log(yearsUntilRetirementFunction(2000, 'Carlos'));
+// console.log(yearsUntilRetirementFunction(1950, 'Jara'));
+
+// // 3 types of function
+
+// // function declaration - can be used before i't declared
+// function calcAge2(birthYear) {
+//     return 2024 - birthYear;
+// }
+
+// // function expression - essentially function value stired in a variable
+// const calcAge3 = function (birthYear) {
+//     return 2024 - birthYear;
+// }
+
+// // arrow function - one line code
+// const calcAge4 = (birthYer) => 2024 - birthYer;
+
+
+
+// ================================================
+/**
+ * Introduction to Arrays
+ *
+ */
+
+// const friend1 = 'Carloz';
+// const friend2 = 'Chen';
+
+// const friends = ['Michael', 'Chelshy', 'John'];
+// console.log(friends);
+
+
+
+// console.log(friends[0]);
+// console.log(friends.length);
+// console.log(friends[friends.length - 1]);
+
+// friends[2] = 'Jonny Sins';
+// console.log(friends);
+
+// // Exercise
+// const calcAge = function (birthYear) {
+//     return 2024 - birthYear;
+// }
+
+// const years = [1990, 1997, 2002, 2010, 2013];
+
+// const ages = [calcAge(years[0]), calcAge(years[1]), calcAge(years[2])];
+// console.log(ages);
+
+
+
+// ================================================
+/**
+ * Basic Array Operations (Methods)
+ */
+
+const friends = ['Micheal', 'Carlos', 'Romulo'];
+friends.push('Jara'); // add elements at the end
+console.log(friends);
+
+friends.unshift('Michael1'); // add elements at the beggining
+console.log(friends)
+
+friends.pop(); // remove last element
+const popped = friends.pop(); // remove last element
+console.log(friends, popped);
+
+friends.shift(); // remove first element
+console.log(friends);
+
+console.log(friends.indexOf('Carlos')); // finding the index of this value
+console.log(friends.indexOf('Micheal')); // finding the index of this value
+
+console.log(friends.includes('Bov')); // check if the value exists on the array
+
+if (friends.includes('Petter')) {
+    console.log('You have a friend called Peter');
 }
-
-function yearsUntilRetirementFunction(birthYear, firstName) {
-    const age = calcAge(birthYear);
-    const retirement = 65 - age;
-
-    if (retirement > 0) {
-        console.log(`${firstName} retires in ${retirement} years.`);
-        return retirement;
-    } else {
-        console.log(`${firstName} has already retires.`);
-        return -1;
-    }
-
-    // return `${firstName} retires in ${retirement} years.`;
-}
-
-console.log(yearsUntilRetirementFunction(2000, 'Carlos'));
-console.log(yearsUntilRetirementFunction(1950, 'Jara'));
-
-// 3 types of function
-
-// function declaration - can be used before i't declared
-function calcAge2(birthYear) {
-    return 2024 - birthYear;
-}
-
-// function expression - essentially function value stired in a variable
-const calcAge3 = function (birthYear) {
-    return 2024 - birthYear;
-}
-
-// arrow function - one line code
-const calcAge4 = (birthYer) => 2024 - birthYer;
