@@ -224,25 +224,25 @@
  * Basic Array Operations (Methods)
  */
 
-const friends = ['Micheal', 'Carlos', 'Romulo'];
-friends.push('Jara'); // add elements at the end
-console.log(friends);
+// const friends = ['Micheal', 'Carlos', 'Romulo'];
+// friends.push('Jara'); // add elements at the end
+// console.log(friends);
 
-friends.unshift('Michael1'); // add elements at the beggining
-console.log(friends)
+// friends.unshift('Michael1'); // add elements at the beggining
+// console.log(friends)
 
-friends.pop(); // remove last element
-const popped = friends.pop(); // remove last element
-console.log(friends, popped);
+// friends.pop(); // remove last element
+// const popped = friends.pop(); // remove last element
+// console.log(friends, popped);
 
-friends.shift(); // remove first element
-console.log(friends);
+// friends.shift(); // remove first element
+// console.log(friends);
 
-console.log(friends.indexOf('Carlos')); // finding the index of this value
-console.log(friends.indexOf('Micheal')); // finding the index of this value
+// console.log(friends.indexOf('Carlos')); // finding the index of this value
+// console.log(friends.indexOf('Micheal')); // finding the index of this value
 
-console.log(friends.includes('Bov')); // check if the value exists on the array
+// console.log(friends.includes('Bov')); // check if the value exists on the array
 
-if (friends.includes('Petter')) {
-    console.log('You have a friend called Peter');
-}
+// if (friends.includes('Petter')) {
+//     console.log('You have a friend called Peter');
+// }
