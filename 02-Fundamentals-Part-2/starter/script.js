@@ -60,7 +60,7 @@
 /**
  * Functions Declarations vs. Expressions
  * hoisting
- * 
+ *
  * can call function function declation before defining it
  * cant call the expresion before defining it
  */
@@ -85,7 +85,7 @@
 // ================================================
 /**
  * Arrow function
- * 
+ *
  * shorter and faster to right
  */
 
@@ -110,21 +110,76 @@
 // ================================================
 /**
  * Function Calling other Functions
+ *
+ */
+
+// function cutFruitPieces(fruit) {
+//     return fruit * 4;
+// }
+
+// function fruitProcessor(apples, oranges) {
+
+//     const applePieces = cutFruitPieces(apples);
+//     const orangePieces = cutFruitPieces(oranges);
+
+//     // simulating the variables
+//     const juice = `Juice with ${applePieces} pieces of apples and ${orangePieces} pieces of orages.`;
+//     return juice;
+// }
+
+// console.log(fruitProcessor(6, 3));
+
+
+// ================================================
+/**
+ * Reviewing Functions
  * 
  */
 
-function cutFruitPieces(fruit) {
-    return fruit * 4;
+const yearsUntilRetirement = (birthYear, firstName) => {
+    const age = 2024 - birthYear;
+    const retirement = 65 - age;
+
+    return `${firstName} retires in ${retirement} years.`;
+
+};
+
+const calcAge = function (birthYear) {
+
+    // current year;
+    const currentYear = 2024;
+    return currentYear - birthYear;
 }
 
-function fruitProcessor(apples, oranges) {
+function yearsUntilRetirementFunction(birthYear, firstName) {
+    const age = calcAge(birthYear);
+    const retirement = 65 - age;
 
-    const applePieces = cutFruitPieces(apples);
-    const orangePieces = cutFruitPieces(oranges);
+    if (retirement > 0) {
+        console.log(`${firstName} retires in ${retirement} years.`);
+        return retirement;
+    } else {
+        console.log(`${firstName} has already retires.`);
+        return -1;
+    }
 
-    // simulating the variables
-    const juice = `Juice with ${applePieces} pieces of apples and ${orangePieces} pieces of orages.`;
-    return juice;
+    // return `${firstName} retires in ${retirement} years.`;
 }
 
-console.log(fruitProcessor(6, 3));
+console.log(yearsUntilRetirementFunction(2000, 'Carlos'));
+console.log(yearsUntilRetirementFunction(1950, 'Jara'));
+
+// 3 types of function
+
+// function declaration - can be used before i't declared
+function calcAge2(birthYear) {
+    return 2024 - birthYear;
+}
+
+// function expression - essentially function value stired in a variable
+const calcAge3 = function (birthYear) {
+    return 2024 - birthYear;
+}
+
+// arrow function - one line code
+const calcAge4 = (birthYer) => 2024 - birthYer;
