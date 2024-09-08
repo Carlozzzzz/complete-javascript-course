@@ -246,3 +246,102 @@
 // if (friends.includes('Petter')) {
 //     console.log('You have a friend called Peter');
 // }
+
+
+
+// ================================================
+/**
+ * Introduction to Objects
+ * use object for more unstructured data
+ *
+ * dot notation => when looking for specific property through concatination
+ * bracket notation => cleaner and easier to use
+ */
+
+// // array format
+// const jonasArray = [
+//     'Carlos',
+//     'Romulo',
+//     'Maralit'
+// ];
+
+// // object format => consist of key:value pair
+// // object literal syntax ->
+// const carlos = {
+//     firstName: 'Carlos',
+//     lastName: 'Maralit',
+//     age: 2024 - 2000,
+//     job: 'teacher',
+//     friends: ['Jara', 'Mark', 'Rhom']
+// }
+
+// // dot notation
+// console.log(carlos.lastName);
+// console.log(carlos['lastName']);
+
+// const nameKey = 'Name';
+
+// // bracket notaion
+// console.log(carlos['first' + nameKey]);
+// console.log(carlos['last' + nameKey]);
+
+// const interestedIn = prompt('What do you want to know about carlos? Choose between firstName, lastName, age, job, friends');
+
+// if (carlos[interestedIn]) {
+//     console.log(carlos[interestedIn]);
+// } else {
+//     console.log('Property not found.')
+// }
+
+// // adding properties to the object
+// carlos.location = 'Philippines';
+// carlos['twitter'] = '@carloz05';
+
+// console.log(carlos);
+
+
+
+// console.log(`${carlos.firstName} has ${carlos.friends.length} friends, and his best friend is ${carlos.friends[2]}`);
+
+
+
+// ================================================
+/**
+ * Objects Methods
+ * 
+ * use this to reference the method itself 
+ * it can only be used inside the object itself
+ * 
+ */
+
+const person = {
+    firstName: 'Carlos',
+    lastName: 'Maralit',
+    birthYear: 2000,
+    job: 'teacher',
+    friends: ['Jara', 'Mark', 'Rhom'],
+    hasDriversLiscense: true,
+    // calcAge: function (birthYear) {
+    //     return 2024 - birthYear;
+    // }
+    // calcAge: function () {
+    //     return 2024 - this.birthYear;
+    // }
+    calcAge: function () {
+        this.age = 2024 - this.birthYear;
+        return this.age;
+    },
+    getDetails: function () {
+        let text = this.hasDriversLiscense ? 'a' : 'no';
+
+        return `${this.firstName} is a ${this.calcAge()} old teacher, and he has ${text} driver's liscense.`;
+    }
+}
+console.log(person.calcAge());
+console.log(person.getDetails());
+
+console.log(person)
+
+console.log(person.age);
+console.log(person.age);
+console.log(person.age);
