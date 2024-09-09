@@ -308,40 +308,164 @@
 // ================================================
 /**
  * Objects Methods
- * 
- * use this to reference the method itself 
+ *
+ * use this to reference the method itself
  * it can only be used inside the object itself
- * 
+ *
  */
 
-const person = {
-    firstName: 'Carlos',
-    lastName: 'Maralit',
-    birthYear: 2000,
-    job: 'teacher',
-    friends: ['Jara', 'Mark', 'Rhom'],
-    hasDriversLiscense: true,
-    // calcAge: function (birthYear) {
-    //     return 2024 - birthYear;
-    // }
-    // calcAge: function () {
-    //     return 2024 - this.birthYear;
-    // }
-    calcAge: function () {
-        this.age = 2024 - this.birthYear;
-        return this.age;
-    },
-    getDetails: function () {
-        let text = this.hasDriversLiscense ? 'a' : 'no';
+// const person = {
+//     firstName: 'Carlos',
+//     lastName: 'Maralit',
+//     birthYear: 2000,
+//     job: 'teacher',
+//     friends: ['Jara', 'Mark', 'Rhom'],
+//     hasDriversLiscense: true,
+//     // calcAge: function (birthYear) {
+//     //     return 2024 - birthYear;
+//     // }
+//     // calcAge: function () {
+//     //     return 2024 - this.birthYear;
+//     // }
+//     calcAge: function () {
+//         this.age = 2024 - this.birthYear;
+//         return this.age;
+//     },
+//     getDetails: function () {
+//         let text = this.hasDriversLiscense ? 'a' : 'no';
 
-        return `${this.firstName} is a ${this.calcAge()} old teacher, and he has ${text} driver's liscense.`;
-    }
-}
-console.log(person.calcAge());
-console.log(person.getDetails());
+//         return `${this.firstName} is a ${this.calcAge()} old teacher, and he has ${text} driver's liscense.`;
+//     }
+// }
+// console.log(person.calcAge());
+// console.log(person.getDetails());
 
-console.log(person)
+// console.log(person)
 
-console.log(person.age);
-console.log(person.age);
-console.log(person.age);
+// console.log(person.age);
+// console.log(person.age);
+// console.log(person.age);
+
+
+// ================================================
+/**
+ * Iteration : Loop
+ *
+ * keep running while the condition is true
+ */
+
+// console.log('Ligting weight repitition 1');
+// console.log('Ligting weight repitition 2');
+// console.log('Ligting weight repitition 3');
+
+// for (let rep = 1; rep < 10; rep++) {
+//     console.log(`Lifting weight repetition ${rep}`);
+// }
+
+// ================================================
+/**
+ * Iteration : Loop
+ * Looping Arrays, Breaking, Continuing
+ */
+
+// const carlos = [
+//     'Carlos',
+//     20,
+//     'Maralit',
+//     2024 - 2000,
+//     'Programmer',
+//     ['Jara', 'Mark', 'Rhom']
+// ];
+
+// // const types = [];
+
+// // for (let i = 0; i < carlos.length; i++) {
+// //     // console.log(`Test ${typeof carlos[i]}`);
+
+// //     // Filling types array
+// //     // types[i] = typeof carlos[i];
+
+// //     types.push(typeof carlos[i]);
+// // }
+
+
+// // const years = [1991, 2008, 2001, 2004];
+// // const ages = [];
+
+// // for (let i = 0; i < years.length; i++) {
+// //     ages.push(2024 - years[i]);
+// // }
+// // console.log(ages)
+
+
+// // continue and break
+// console.log('--Only Strings--');
+// for (let i = 0; i < carlos.length; i++) {
+//     // if the type of the variable is not string, skip it
+//     if (typeof carlos[i] !== 'string') continue;
+
+//     console.log(`${carlos[i]} -- ${typeof carlos[i]}`);
+// }
+
+// console.log('--Break things--');
+// for (let i = 0; i < carlos.length; i++) {
+//     // if the spicific number is found, stop the loop
+//     if (typeof carlos[i] === 'number') break;
+
+//     console.log(`${carlos[i]} -- ${typeof carlos[i]}`);
+// }
+
+
+// ================================================
+/**
+ * Iteration : Loop
+ *
+ * Looking backwards ang Loops in Loops
+ */
+
+
+// const carlos = [
+//     'Carlos',
+//     20,
+//     'Maralit',
+//     2024 - 2000,
+//     'Programmer',
+//     ['Jara', 'Mark', 'Rhom']
+// ];
+
+// for (let i = carlos.length - 1; i >= 0; i--) {
+//     console.log(carlos[i])
+// }
+
+
+// for (let exercise = 1; exercise < 4; exercise++) {
+//     console.log(`=========Starting exercise ${exercise}`);
+
+//     for (let rep = 1; rep < 6; rep++) {
+//         console.log(`Lifting weight: ${rep} time/s.`)
+//     }
+// }
+
+
+// ================================================
+/**
+ * Iteration : While Loop
+ *
+ * Looking backwards ang Loops in Loops
+ */
+
+// for (let rep = 1; rep < 11; rep++) {
+//     console.log(`Lifting weight: ${rep} time/s.`)
+// }
+
+// while loop
+// let rep = 1;
+// while (rep <= 10) {
+//     console.log(`WHILE: Lifting weight: ${rep} time/s.`)
+//     rep++;
+// }
+
+// let dice = Math.trunc(Math.random() * 6) + 1;
+// while (dice !== 6) {
+//     console.log(`You rolled a ${dice}`)
+// }
