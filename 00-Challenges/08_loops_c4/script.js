@@ -9,10 +9,14 @@ const calcTip = function (bill) {
 }
 
 for (let i = 0; i < bills.length; i++) {
-    tips[i] = calcTip(bills[i]);
-    totals[i] = tips[i] + bills[i];
+    // tips[i] = calcTip(bills[i]);
+    // totals[i] = tips[i] + bills[i];
+
+    tips.push(calcTip(bills[i]));
+    totals.push(tips[i] + bills[i]);
 }
 
+console.log(tips, totals)
 
 const calcAverage = function (arr) {
     let sum = 0;
