@@ -29,19 +29,17 @@ const temperatures = [3, -2, -6, -1, 'error', 9, 13, 17, 15, 14, 9, 5];
 
 // 2) Breaking up into sub-problems
 // - Create a function with arr parameter
+// - create a variable that will hold a value everytime you loop on it
 // - loop for each value and display it as you loop on it
 
-const printForecast = function (arr) {
-  let tempArr = '... ';
+const tempToString = arr => {
+  let currTemp = '... ';
   for (let i = 0; i < arr.length; i++) {
-    const element = arr[i];
-    tempArr += ` ${arr[i]}°C in ${i + 1} days ... `;
+    if (typeof arr[i] !== 'number') continue;
+    currTemp += `${arr[i]}°C in ${i} days...`;
   }
 
-  return tempArr;
+  return currTemp;
 };
 
-const tempArr = [17, 21, 23];
-// const tempArr = [12, 5, -5, 0, 4];
-
-console.log(printForecast(tempArr));
+console.log(tempToString(temperatures));
