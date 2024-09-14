@@ -7,30 +7,60 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <h1>JavaScript is fun, but so is HTML & CSS</h1>
-    <p class="first">
-      This is sample paragraph for this thing.
-      <a href="https://www.facebook.com/carlosromulo05" target="_blank">
-        Fesbook
-      </a>
-    </p>
+    <div class="main-content main-story">
+      <div class="header">
+        <h1>JavaScript is fun, but so is HTML & CSS</h1>
+        <p class="paragraph first">
+          My own version for this starter file.
+          <a href="https://www.facebook.com/carlosromulo05" target="_blank">
+            Fesbook
+          </a>
+        </p>
+      </div>
+      <div class="main-focus">
+        <div class="wrapper">
+          <div class="custom-border left-top-border"></div>
+          <div class="custom-border right-top-border"></div>
+          <div class="custom-border left-bottom-border"></div>
+          <div class="custom-border right-bottom-border"></div>
+          <div class="header-desc child">
+            <h2>Eme lang...</h2>
+            <p class="second">The magic will have at any moment!</p>
+          </div>
 
-    <h2>Another tag</h2>
-    <p class="second">Just another tag for this shit</p>
-
-    <img
-      id="course-img"
-      src="https://scontent.fpag2-1.fna.fbcdn.net/v/t39.30808-6/321680745_559323759361656_6693782259528390225_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeHYzvoDsorcu3OPCEMHYNK6GsqLDyCCr-YayosPIIKv5rgQ4Hzv44gkniIdkS1llcDG5mvBywCNncbPJ7mx4923&_nc_ohc=YA1gvdxgepoQ7kNvgGPdkFI&_nc_ht=scontent.fpag2-1.fna&oh=00_AYBLumVaKyK8u2CxevG59GLxt8AW5qFiQql0rRfdfPIK3w&oe=66E8CA19"
-      alt="FB IMAGE"
-    />
+          <img
+            class="course-img child"
+            id="course-img"
+            src="https://scontent.fpag2-1.fna.fbcdn.net/v/t39.30808-6/321680745_559323759361656_6693782259528390225_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeHYzvoDsorcu3OPCEMHYNK6GsqLDyCCr-YayosPIIKv5rgQ4Hzv44gkniIdkS1llcDG5mvBywCNncbPJ7mx4923&_nc_ohc=YA1gvdxgepoQ7kNvgGPdkFI&_nc_ht=scontent.fpag2-1.fna&oh=00_AYBLumVaKyK8u2CxevG59GLxt8AW5qFiQql0rRfdfPIK3w&oe=66E8CA19"
+            alt="FB IMAGE"
+          />
+        </div>
+      </div>
+    </div>
 
     <!-- LEARN -->
     <!-- Semantic HTML browse for this SEO -->
-    <form id="formFesbook">
-      <h2>Carlos Maralit</h2>
-      <p class="first">Please fill in this form :)</p>
-      <input type="text" placeholder="My Name" />
-      <button>OK</button>
-    </form>
+    <div class="main-content form">
+      <form id="formFesbook" class="form-fesbook">
+        <h2>Sample Form</h2>
+        <p class="paragraph second">Please fill in this form :)</p>
+        <div class="form-controls">
+          <input type="text" placeholder="Your Fesbook link" />
+          <button>Try it out!</button>
+        </div>
+      </form>
+    </div>
+    <script>
+      window.addEventListener('resize', setHeightToWidth);
+      window.addEventListener('load', setHeightToWidth);
+
+      function setHeightToWidth() {
+        const image = document.querySelector(
+          '.main-content .main-focus .course-img'
+        );
+        const width = image.offsetWidth; // Get the computed width
+        image.style.height = `${width}px`; // Set the height to be equal to the width
+      }
+    </script>
   </body>
 </html>

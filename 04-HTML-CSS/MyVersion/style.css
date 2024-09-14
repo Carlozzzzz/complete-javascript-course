@@ -4,33 +4,41 @@
   box-sizing: border-box;
   /* include padding  and borders into the width*/
   /* ex: if width is 100px , the added padding and borders will add up here */
+  /* Collor Pallete */
+  /* https://colorhunt.co/palette/2121213232320d737714ffec */
+
+  /* colors */
+  --dark-navy-green: #0d7377;
+  --neon-green: #14ffec;
+  --black-1: #212121;
+  --black-2: #323232;
+
+  /* borders */
+  --border-3: 3.7px solid;
+
+  /* height */
+  --height-header: 150px;
 }
+
 body {
-  background-color: rgb(255, 247, 201);
   font-family: Arial;
-  font-size: 20px;
-  padding: 75px;
+  font-size: 1.2rem;
 }
 
 h1 {
-  font-size: 40px;
+  font-size: 2rem;
   margin-bottom: 20px;
 }
 
 p {
-  margin-bottom: 20px;
+  font-size: 0.9rem;
 }
 
-.first {
-  color: red;
-}
-
-#formFesbook {
-  background-color: yellow;
-  border: 5px solid #444;
-  width: 400px;
-  padding: 25px;
-  margin-top: 30px;
+a {
+  padding: 2px 5px;
+  background-color: rgb(48, 23, 189);
+  color: white;
+  text-decoration: none;
 }
 
 input,
@@ -39,16 +47,173 @@ button {
   font-size: 16px;
 }
 
-a {
-  background-color: yellowgreen;
+/* **START** ==== Global Classes */
+
+.main-content {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
 }
 
-#formFesbook h2 {
+.main-story {
+  /* display: none; */
+}
+
+/* **END** ==== Global Classes */
+/* ============================ */
+
+/* **START** ==== Main-content DIV */
+.main-content .header {
+  color: white;
+  width: 100%;
+  max-height: var(--height-header);
+  padding: 30px 25px;
+  background-color: var(--black-2);
+  padding: 5% 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.main-content .main-focus {
+  width: 100%;
+  height: calc(100vh - 150px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-content .main-focus .wrapper {
+  width: 60%;
+  padding: 5%;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+}
+
+.main-content .main-focus .course-img {
+  width: 40%;
+  border-radius: 50%;
+  object-fit: cover; /* Ensures the image doesn't get distorted */
+  cursor: pointer;
+}
+
+.main-content .main-focus .course-img {
+  border-radius: 50%;
+  object-fit: cover;
+  transform: rotateY(0deg); /* Default state */
+  transition: transform 0.9s; /* Adjust the duration for 2 flips */
+  transform-style: preserve-3d;
+}
+
+.main-content .main-focus .course-img:hover {
+  transform: rotateY(720deg); /* Flip when hovered */
+}
+
+.main-content .main-focus .header-desc {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+}
+
+.main-content .main-focus .custom-border {
+  position: absolute;
+  width: 2.2rem;
+  height: 2.2rem;
+}
+
+.main-content .main-focus .left-top-border {
+  border-top: var(--border-3) var(--neon-green);
+  border-left: var(--border-3) var(--neon-green);
+  top: 0;
+  left: 0;
+}
+
+.main-content .main-focus .right-top-border {
+  border-top: var(--border-3) var(--neon-green);
+  border-right: var(--border-3) var(--neon-green);
+  top: 0;
+  right: 0;
+}
+
+.main-content .main-focus .left-bottom-border {
+  border-bottom: var(--border-3) var(--neon-green);
+  border-left: var(--border-3) var(--neon-green);
+  bottom: 0;
+  left: 0;
+}
+
+.main-content .main-focus .right-bottom-border {
+  border-bottom: var(--border-3) var(--neon-green);
+  border-right: var(--border-3) var(--neon-green);
+  bottom: 0;
+  right: 0;
+}
+
+/* **END** ==== Main-content DIV */
+/* ============================ */
+
+/* ============================ */
+/* Header */
+
+/* #formFesbook {
+  background-color: yellow;
+  border: 5px solid #444;
+  width: 400px;
+  padding: 25px;
+  margin-top: 30px;
+} */
+
+/* **END** ==== Header */
+
+/* ============================ */
+/* **START** ==== Form */
+
+.form-fesbook {
+  color: white;
+  border: 3.7px solid var(--neon-green);
+  border-radius: 10px;
+  width: 400px;
+  padding: 50px;
+  background-color: var(--black-2);
+}
+
+.form-fesbook h2 {
+  /* color: var(--black-2); */
   text-align: center;
-  color: olivedrab;
+  margin-bottom: 40px;
+}
+
+.form-fesbook p {
+  /* color: var(--black-2); */
   margin-bottom: 5px;
 }
 
-#course-img {
-  width: 200px;
+.form-fesbook .form-controls input,
+.form-fesbook .form-controls button {
+  width: 100%;
+  margin-bottom: 5px;
+  border-radius: 8px;
 }
+
+.form-fesbook .form-controls button {
+  background-color: var(--dark-navy-green);
+  color: white;
+  font-weight: bold;
+  transition: 0.5s;
+}
+
+.form-fesbook .form-controls button:hover {
+  background-color: var(--neon-green);
+  color: white;
+}
+
+/* **END** ==== Form */
+/* ============================ */
