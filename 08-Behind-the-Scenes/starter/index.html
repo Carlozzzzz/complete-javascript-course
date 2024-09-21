@@ -6,7 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>How JavaScript Works Behind the Scenes</title>
     <style>
-      body {
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .container {
         height: 100vh;
         display: flex;
         align-items: center;
@@ -24,7 +28,85 @@
     </style>
   </head>
   <body>
-    <h1>How JavaScript Works Behind the Scenes</h1>
-    <script src="script.js"></script>
+    <div class="container">
+      <h1>How JavaScript Works Behind the Scenes</h1>
+      <!-- <script src="script.js"></script> -->
+      <!-- <script src="regularVsArrowFunc.js"></script> -->
+      <script src="primitiveVsObjects.js"></script>
+    </div>
+    <br />
+    <table style="width: 100%" border="2px">
+      <tr>
+        <th>title</th>
+        <th>Details</th>
+        <th>example</th>
+      </tr>
+      <tr>
+        <td>high level</td>
+        <td>
+          need some rss to run for high level, low level manage rss manually,
+          does in js everything works auto
+        </td>
+        <td>Germany</td>
+      </tr>
+      <tr>
+        <td>Garbage Collector</td>
+        <td>cleaning memory from time to time</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Interpreted or just in time compiled</td>
+        <td>auto compiled inside js engine/browser</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Multi Paradigm</td>
+        <td>
+          structuring code, procedural programming | OOP | Functional
+          Programming. Imperative Vs. Declarative
+        </td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Prototype based OP</td>
+        <td>Most of the class in js is object based.</td>
+        <td>Array is bruild from prototype | Object</td>
+      </tr>
+      <tr>
+        <td>First Class Funtions</td>
+        <td>we can use function as an argument|parameters</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Dynamic</td>
+        <td>
+          dont need to specify the type of variable. like string name = '';
+        </td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Single Thread</td>
+        <td>
+          Cuncurrency model: js engine that handles multiple task at the same
+          time. JS run ong single thread
+        </td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Non-blocking event loop</td>
+        <td>takes long running stuffs and run them in the background</td>
+        <td></td>
+      </tr>
+    </table>
+
+    <div class="container">
+      <div>
+        <h2>JS Engine</h2>
+        <br />
+        <p>call stack and heap</p>
+        <p>arrow function dont use this keyword</p>
+      </div>
+      <div>Js is using JIT(Just in time ) compilation</div>
+    </div>
   </body>
 </html>
