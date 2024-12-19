@@ -57,5 +57,6 @@ console.log('after marriage: ', jessicaCopy);
 
 jessicaCopy.family.push('Marry');
 jessicaCopy.family.push('John');
+jessicaCopy.gender = 'Female';
 console.log('Before marriage: ', jessica2);
 console.log('after marriage: ', jessicaCopy);

@@ -22,7 +22,7 @@ for (let i = 0; i < btnsOpenModal.length; i++) {
     overlay.classList.add('hidden');
   };
 
-  btnCloseModal.addEventListener('click', openModal);
+  btnCloseModal.addEventListener('click', closeModal);
 
   overlay.addEventListener('click', closeModal);
 

@@ -109,3 +109,4 @@ const restaurantCopy = { ...restaurant };
 restaurantCopy.name = 'Carlosheezzz Ristorante';
 console.log(restaurantCopy.name);
 console.log(restaurant.name);
+

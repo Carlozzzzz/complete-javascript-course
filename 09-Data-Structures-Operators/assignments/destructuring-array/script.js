@@ -1,5 +1,4 @@
 // Destructuring Arrays
-
 const book = ['Nemesis', 'Bekesis', 'Lokusus'];
 const [, , third] = book;
 console.log(third);
