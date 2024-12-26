@@ -327,3 +327,141 @@ for(const [key, {open, close}] of entries) { // destructuring objects
 }
 
 
+/** Sets */
+// can never have any duplicates
+console.log('Set=====================')
+const ordersSet = new Set(['Pasta', 'Pizza', 'Pizza', 'Risotto']);
+
+console.log(ordersSet.size)
+console.log(new Set('Jamess'))
+console.log(ordersSet.has('Pasta'))
+ordersSet.add('Garlix Sugar')
+ordersSet.add('Garlix Sugar')
+ordersSet.delete('Pizza')
+console.log(ordersSet)
+
+
+// example 
+const staff = ['Waiter', 'Chef', 'Waiter', 'Manager', 'Chef', 'Waiter'];
+const staffUnique = [...new Set(staff)];
+console.log(staffUnique);
+console.log(new Set(['Waiter', 'Chef', 'Waiter', 'Manager', 'Chef', 'Waiter']).size)
+console.log(new Set('carlosromulomaralit').size);
+
+
+/** New Operator to Make Sets Useful */
+const italianFoods = new Set([
+  'pasta',
+  'gnocchi',
+  'tomatoes',
+  'olive oil',
+  'garlic',
+  'basil',
+])
+
+const mexicanFoods = new Set([
+  'tortillas',
+  'beans',
+  'rice',
+  'tomatoes',
+  'avocado',
+  'garlic',
+]);
+
+// contain all the elements that are similar in both sets
+const commonFoods = italianFoods.intersection(mexicanFoods);
+console.log('Intersection: ', commonFoods, [...commonFoods])
+
+const italianMexicanFusion = italianFoods.union(mexicanFoods);
+console.log('Union:', italianMexicanFusion) // display the all elements without redundant data
+
+// With array combination
+console.log(new Set([...italianFoods, ...mexicanFoods]))
+
+// Unique Values -- remove the common element, output items from italianFoods 
+// only output the elements from the left side
+const uniqueItalianFoods = italianFoods.difference(mexicanFoods);
+console.log('Unique Italian Foods: ', uniqueItalianFoods)
+
+const uniqueMexicanFoods = mexicanFoods.difference(italianFoods);
+console.log('Unique Mexican Foods: ', uniqueMexicanFoods)
+
+// will not include the similar element from each set
+const uniqueItalianAndMexicanFoods = italianFoods.symmetricDifference(mexicanFoods);
+console.log(uniqueItalianAndMexicanFoods)
+
+// Check set if similar to other
+console.log('Is similar: ', italianFoods.isDisjointFrom(mexicanFoods))
+
+
+/** Maps */
+// DSA with key values, keys can have any type
+const rest = new Map();
+rest.set('name', 'Classico Italiano');
+rest.set(1, 'Batangas');
+rest.set(2, 'Lisbon, Batanes');
+
+console.log(rest.set(2, 'lisbon, Test'))
+
+rest.set('categories', ['Italian', 'Pizzeria', 'Vegetarian', 'Organic'])
+  .set('open', 11)
+  .set('close', 23)
+  .set(true, 'We are open :D')
+  .set(false, 'We are closed :(')
+
+console.log(rest.get('name'))
+console.log(rest.get(true))
+console.log(rest.get(1))
+
+
+const time = 9;
+console.log(rest.get(time > rest.get('open') && time < rest.get('close'))); // a practical example
+
+// check if a map contains a certain key
+console.log(rest.has('categories'))
+rest.delete(2);
+// rest.clear();
+const arr2 = [1,2]; // using array as map keys
+rest.set(arr2, 'Test')
+console.log(rest.get(arr2));
+rest.set(document.querySelector('h1'), 'Heading'); // using html elements as keys
+console.log(rest);
+console.log(rest.size);
+
+/** Maps Iteration */
+// populating maps
+
+const question = new Map([
+  ['question', 'What is the best programming language in the world?'],
+  [1, 'c'],
+  [2, 'Java'],
+  [3, 'JavaScript'],
+  ['correct', 3],
+  [true, 'Correct 🎁'],
+  [false, 'Try again! 🤞'],
+]);
+
+console.log(question)
+
+//Convert Object to map
+console.log(Object.entries(openingHours2))
+const hoursMap = new Map(Object.entries(openingHours2));
+console.log(hoursMap)
+console.log(hoursMap.get('thu'))
+
+// back to question map
+console.log(question.get('question'))
+for (const [key, value] of question) { // destruring with iteration
+  if(typeof key === 'number') console.log(`Answer ${key} : ${value}`)
+}
+// const answer = Number(prompt('Your answer: '))
+const answer = 3
+console.log(answer)
+console.log(question.get(question.get('correct') === answer))
+
+// Converting map to array
+console.log([...question])
+console.log([...question.keys()])
+console.log([...question.values()])
+
+
