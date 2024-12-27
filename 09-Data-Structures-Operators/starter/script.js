@@ -465,3 +465,40 @@ console.log([...question.keys()])
 console.log([...question.values()])
 
 
+/** Which DSA to use */
+console.log('Which DSA to used? =================')
+/**
+  Source of data
+    - from the program itself
+    - from the UI
+    - from external source : API (fetch from here) ex: recepi currency, weather update and so on...
+
+  Collection of data => DSA
+    - array / set : values without desc
+    - objects / maps : key value (JSON data)
+
+  Other built-in
+    - WeakMap
+    - WeakSet
+    
+  Non-Built IN DSA in JavaScript
+    - stacks
+    - queues
+    - linked lists
+    - trees
+    - hash tables
+    
+  When to use JS DSA
+  
+    - arrays : use when need values in order, manipulate data
+    - sets : only with unique values, high performance, removes duplicates
+    
+    - objects : traditional key => value, easier to write
+        : working with JSON
+        : when include FUNCTIONS
+    - maps : better performance, can have any data type, easy to iterate
+        : keys that are not strings
+        
+*/
+
+
