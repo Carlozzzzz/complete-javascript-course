@@ -67,6 +67,9 @@ for (let x = 0; x <= 90; x++) {
     }
 }
 
+// correct approach
+console.log(`Correct: An event happend, or average, every ${90 / gameEvents.size}`)
+
 // 4
 /** 
     Loop through the gameEvent and print each of it on the console
@@ -80,4 +83,10 @@ for(const [key, value] of gameEvents) {
     let gamehalf;
     (key <= 45) ? gamehalf = '[FIRST HALF]' : gamehalf = '[SECOND HALF]';
     console.log(`${gamehalf} ${key} : ${value}`)
+}
+// Tutorials approach
+console.log('other approach----= see the code')
+for(const [min, event] of gameEvents) {
+    const half = min <= 45 ? 'FIRST' : 'HALF';
+    console.log(`[${half} HALF] ${min} : ${event}`)
 }
