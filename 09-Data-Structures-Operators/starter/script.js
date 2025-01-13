@@ -502,3 +502,109 @@ console.log('Which DSA to used? =================')
 */
 
 
+
+/** Working with Strings Part #1 */
+
+console.log('\n\nWorking with STRINGS==============================')
+const airline = 'TAP Air Portugal';
+const plane = 'A320';
+
+console.log(plane[0])
+console.log(plane[1])
+console.log(plane[2])
+console.log('B&37'[0])
+
+console.log(airline.length);
+console.log(airline.indexOf('r'));
+console.log(airline.lastIndexOf('r'));
+console.log(airline.indexOf('Portugal')); // case sensitive
+
+// Slicing or extracting indexes
+console.log(airline.slice(4)); // Will start in A
+console.log(airline.slice(4, 7));
+
+console.log(airline.slice(0, airline.indexOf(' ')))
+
+console.log(airline.slice(-2)); // start extracting from the end
+console.log(airline.slice(1, -1)); // start extracting from the end
+
+const checkMiddleSeat = function(seat) {
+  // B and E are middle seats
+  const s = seat.slice(-1);
+  
+  if(s === 'B' || s ==='E') console.log('You got the middle one 😂')
+  else console.log('You got lucky 🤞')
+  console.log(s);
+};
+
+checkMiddleSeat('11B');
+checkMiddleSeat('23C');
+checkMiddleSeat('3E');
+
+
+// Capitalize
+const passenger = 'cArlOs';
+const passengerLower = passenger.toLowerCase();
+const passengerCorrect = passengerLower[0].toUpperCase() + passenger.slice(1).toLowerCase();
+
+console.log(passengerCorrect)
+
+// Check | Comparing Emails
+const email = 'hello@carlos.io';
+const loginEmail = '   hEllo@carLos.io \n';
+
+const lowerEmail = loginEmail.toLowerCase();
+const trimmedEmail = lowerEmail.trim();
+
+const normalizedEmail = loginEmail.toLowerCase().trim();
+
+console.log(email);
+console.log(normalizedEmail)
+console.log(email === normalizedEmail)
+
+// Replacing parts of string
+const priceGB = '288,87€';
+const priceUS = priceGB.replace('€', '$').replace(',', '.');
+console.log(priceUS)
+
+const announcement = 'All passengers come o barding door 23. Boarding door 23!';
+// console.log(announcement.replaceAll('door', 'gate'));
+
+// Regular expressions
+console.log(announcement.replace(/door/g, 'gate')); // case sensitive, g for global
+
+// Booleans
+const plane2 = 'Air A320neo';
+console.log(plane2.includes('A320'))
+console.log(plane2.includes('csss'))
+console.log(plane2.startsWith('Air'))
+
+if(plane2.startsWith('Air') && plane2.endsWith('neo')) {
+  console.log('New airbus fam.')
+}
+
+
+// Practice exercise
+const checkBaggage = function(items) {
+  const baggage = items.toLowerCase();
+  
+  if(baggage.includes('knife') || baggage.includes('gun')) {
+    console.log('You are not allowed on board.')
+  } else {
+    console.log('Welcome aboard!')
+  }
+}
+
+checkBaggage('I have some laptop, some food and a pocket knife');
+checkBaggage('Socks and dildo.');
+checkBaggage('Got new baby with money.');
+
+// Dividing string
+// split and join
+console.log('a+boka+eme+taina'.split('+'));
+console.log('Carlos maralit'.split(' '))
+
+const [firstName, lastName] = 'Carlos maralit'.split(' ');
+
+const newName = ['Mr.', firstName, lastName.toUpperCase()].join(' ');
+console.log(newName)
