@@ -608,3 +608,48 @@ const [firstName, lastName] = 'Carlos maralit'.split(' ');
 
 const newName = ['Mr.', firstName, lastName.toUpperCase()].join(' ');
 console.log(newName)
+
+const capitalizeName = function(name) {
+  const names = name.split(' ');
+  const namesUpper = [];
+  
+  for(const n of names) {
+    // namesUpper.push(n[0].toUpperCase() + n.slice(1)); 
+    namesUpper.push(n.replace(n[0], n[0].toUpperCase()));
+  }
+  
+  console.log(namesUpper.join(' '));
+};
+
+capitalizeName('carlos romulo p. maralit III');
+capitalizeName('diana rose panganiban');
+
+
+// Padding a string 
+// add number of characters on the string
+
+const message = 'Go to gate 23!';
+console.log(message.padStart(25, '+'))
+console.log('carlos'.padStart(20, '+').padEnd(30, '+'))
+console.log('Carlos'.padEnd(10, '+'))
+
+// example
+const maskCreditCard = function(number) {
+  const str = number.toString();
+  const last = str.slice(-4);
+  return last.padStart(str.length, '*')
+}
+
+console.log(maskCreditCard(23912931923));
+console.log(maskCreditCard(12314142323))
+
+// Repeat with string padding
+const message2 = 'Bad weather... All Departures delated...';
+console.log(message2.repeat(4))
+
+const planesInLine = function(n) {
+  console.log(`There are ${n} planes in line ${'✈'.repeat(n)}`)
+}
+
+planesInLine(5);
+planesInLine(2);
